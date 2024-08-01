@@ -55,6 +55,30 @@ async function deleteSkill(req, res) {
   }
 }
 
+async function edit(req, res) {
+  try {
+    //find the skill that needs to be edited
+    const skill = await Skill.findById(req.params.skillId)
+    //render the edit page with skill details
+    res.render('skills/edit', {
+      skill
+    })
+  } catch (error) {
+    console.log(error)
+    res.redirect('/skills')
+  }
+}
+
+async function update(req, res) {
+  try {
+    req.body.learned = !!req.body.learned
+    await Skill.findByIdAndUpdate(req.params.skillId, req.body, {new: true})
+    res.redirect(`/skills/${req.params.skillId}`)
+  } catch (error) {
+    console.log(error)
+    res.redirect('/skills')
+  }
+}
 
 
 export {
@@ -63,4 +87,6 @@ export {
   create,
   show,
   deleteSkill as delete,
+  edit,
+  update,
 }

@@ -1,11 +1,11 @@
 body {
   padding: 30px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: beige;
+  background-color: lightgray;
 }
 
 a {
-  color: #00B7FF;
+  color: blue;
   text-decoration: none;
 }
 
@@ -19,13 +19,28 @@ button {
   cursor: pointer;
 }
 
-#add-skill {
+form  {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.action-button {
   color: aliceblue;
   background-color: blueviolet;
   padding: 5px;
   border-radius: 10%;
 }
 
-#add-skill:hover {
+.action-button:hover {
   background-color: darkblue;
+  color: aliceblue;
+}
+
+#delete-button, #edit-button {
+  background:none;
+  border-radius: 100%;
+}
+
+#delete-button:hover, #edit-button:hover {
+  background-color: burlywood;
 }

@@ -11,8 +11,9 @@
     <h3>Skill: <%= skill.text %></h3>
     <p>Learned: <%= skill.learned ? 'Yes' : 'Not yet!' %></p>
     <form method="POST" action="/skills/<%= skill._id %>?_method=DELETE" class="delete-form">
-        <button type="submit">❌</button>
+        <button id="delete-button" class="action-button" type="submit">❌</button>
     </form>
+    <a href="/skills/<%= skill._id %>/edit"><button id="edit-button" class="action-button">✏️</button></a>
     <h4><a href="/skills">Back to Skills</a></h4>
 </body>
 </html>
