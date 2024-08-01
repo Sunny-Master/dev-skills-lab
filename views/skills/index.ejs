@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills to Learn</title>
+</head>
+<body>
+  <h1>Skills to Learn</h1>
+  <ul>
+    <% skills.forEach(skill => { %>
+      <li>
+      <%= skill.text %>
+      - 
+      <%= skill.learned ? 'learned' : 'not learned' %>
+      </li>
+    <% }) %>
+  </ul>
+  <h3><a href="/skills/new">Add a Skill</a></h3>
+  <a href="/">Home</a>
+</body>
+</html>
