@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
   <title>Skills to Learn</title>
 </head>
 <body>
@@ -10,13 +11,13 @@
   <ul>
     <% skills.forEach(skill => { %>
       <li>
-      <%= skill.text %>
-      - 
-      <%= skill.learned ? 'learned' : 'not learned' %>
+        <a href="/skills/<%= skill._id %>"><%= skill.text %></a>
+        - 
+        <%= skill.learned ? 'learned' : 'not learned' %>
       </li>
     <% }) %>
   </ul>
-  <h3><a href="/skills/new">Add a Skill</a></h3>
-  <a href="/">Home</a>
+  <a id="add-skill" href="/skills/new">Add a Skill</a>
+  <h4><a href="/">Home</a></h4>
 </body>
 </html>

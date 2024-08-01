@@ -1,8 +1,31 @@
 body {
-  padding: 50px;
+  padding: 30px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: beige;
 }
 
 a {
   color: #00B7FF;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blueviolet;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#add-skill {
+  color: aliceblue;
+  background-color: blueviolet;
+  padding: 5px;
+  border-radius: 10%;
+}
+
+#add-skill:hover {
+  background-color: darkblue;
 }
